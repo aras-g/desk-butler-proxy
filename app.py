@@ -12,7 +12,7 @@ PROXY_API_KEY  = os.getenv("PROXY_API_KEY")
 if not OPENAI_API_KEY:
     raise RuntimeError("OPENAI_API_KEY missing")
 
-client = OpenAI(api_key=OPENAI_API_KEY)
+client = OpenAI(api_key=openai_api_key)
 app = FastAPI(title="Desk Butler Cloud Proxy")
 
 LATEST: Dict[str, Dict] = {}
